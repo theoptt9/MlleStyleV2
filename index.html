@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mlle Style</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<meta name="description" content="Site Web officiel de Mlle Style, boutique située à Argenton sur Creuse">
+<meta name="keyword" content="Mlle Style, boutique, Argenton, Argenton sur Creuse, Berry, Creuse, Centre, Vetements, enfant, homme, femme">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="#">Mlle Style</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#presentified">Informations</a></li>
+        <li><a href="#ou">Adresse</a></li>
+        <li><a href="nouveau.html">Tenue Mlle Style !</a></li>
+        <li><a href="#horairified">Horaires</a></li>
+        <li><a href="#contactified">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+ 
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+  
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+    menu.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+   
+
+<!--    
+    <div id="textPresentation">
+       
+     <h7>Mlle Style</h7>
+     
+     </div>
+
+
+<header>
+    <div>
+        
+        <nav>
+            <ul id="menu">
+             <li><a class="decoMenu" href="#presentified">Informations</a></li> 
+             <li><a class="decoMenu" href="#ou">Adresse</a></li>
+             <li><a class="decoMenu" href="nouveau.html">Tenue Mlle Style ! </a></li>
+            
+            <li><a class="decoMenu" href="#horairified">Horaires</a></li> 
+             <li><a class="decoMenu" href="#contactified">Contact</a></li>
+             </ul>
+        </nav>
+    </div>
+</header>
+ 
+ -->
+ <div id="presentified"></div>
+<hr>
+
+
+
+
+
+
+<div id="presentationMlleStyle">
+    <div class ="titre">
+        <h1> Qui est Mlle Style ? </h1>
+    </div>  
+        <div class="cadre">
+            <p>Mlle Style est une boutique de prêt-à-porter féminin et masculin, d'accessoires de mode et de bijoux fantaisies. Cette boutique met également en vente des sacs à mains ainsi que des chaussures. Implanté en 2019, ce magasin dispose d'une grande variété de vêtements et il n'a pas fini de vous surprendre.</p>
+        </div>
+</div>
+<div id="ou"> 
+</div>
+<hr>
+
+<div class ="titre">
+    <h1> Où trouver Mlle Style ? </h1>
+</div>
+
+    <div class="cadre">
+<p>Le magasin de Mlle Style se trouve au 5 Rue Grande, 36200 Argenton-sur-Creuse.</p>
+</div>
+<div id="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.95765567542!2d1.5166289513687978!3d46.58807446566656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fb91512b3266b5%3A0x67ffe9b9cffd9e3d!2s5%20Rue%20Grande%2C%2036200%20Argenton-sur-Creuse!5e0!3m2!1sfr!2sfr!4v1623859792276!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+
+<img class="imgCentre" alt="imageDevanture" src="./media/devanture.png">
+<div id="horairified"></div> 
+<div class="auCentreSouligne">
+<p>Devanture de Mlle Style</p>      
+</div>
+
+<hr> 
+
+<div class ="titre">
+    <h1> Horaires </h1>
+</div>
+<div id="divHoraire">
+<p id="ouverture">Notre boutique est ouverte : </p>
+<div class="cadreHoraire">
+    
+    <h5>Mardi-Vendredi </h5>
+    <p class="horaire">09:30–12:30 </p>
+    <p class="horaire">14:30–19:00 </p>
+    
+    <h5>Samedi </h5>
+    <p class="horaire">09:30–12:30 </p>
+    <p class="horaire">14:30–18h30 </p>
+
+    
+</div>
+</div>
+<hr> 
+
+<div class ="titre">
+    <h1> Avis</h1>
+</div>
+<div id="pourLeBouton">
+    
+
+<a href="https://www.google.com/search?client=opera-gx&q=mlle+style&sourceid=opera&ie=UTF-8&oe=UTF-8#lrd=0x47fb9170f526935f:0x966a79d64eb3de06,3,,,">
+    <button class="btn" type="button">Donner son avis !</button></a>
+</div>
+<div id="contactified"></div>
+</div>
+<footer> 
+    <br><br>
+    <h6 id="cadreContact">Si vous avez la moindre question, vous pouvez me contacter par :</h6>      
+    <div id="foot">
+        <div class=testo>
+            <img class="reseau" alt="imageInstagram" src="./media/instagram.png">
+            <a class="sansDeco" href="https://www.instagram.com/carine_mlle_style/"><p>Instagram</p></a>
+        </div>
+        
+        <div class=testo>
+            <img class="reseau" alt="imageTelephone" src="./media/telephone.png">
+            
+            <a class="sansDeco" ><p>02 54 34 43 16</p></a>
+        </div>
+        <div class=testo>
+            <img class="reseau" alt="imageFacebook" src="./media/facebook.png">
+            <a class="sansDeco" href="https://www.facebook.com/melle.style/"><p>Facebook</p></a>
+        </div>
+      
+    </div>
+
+    <div class="cadreFin">
+        <p>Site mis à jour le 16/06/2021 par <a class="sansDeco2" href="https://www.instagram.com/theo_petit9/"><p>Théo Petit</p></a>
+        </div>
+        <br><br>
+</footer>
+</body>
+</html>
+

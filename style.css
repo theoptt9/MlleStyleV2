@@ -1,0 +1,729 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ol, ul {
+	list-style: none;
+}
+
+/*****************************************************Custom code*********************************************************/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0px 30px;
+}
+.navbar{
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height:100px;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  
+}
+.navbar.sticky{
+  padding: 10px 0;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.navbar .logo a{
+  color: #FF00EC;
+  text-decoration: none;
+ font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 7vh;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+  display: inline-flex;
+}
+.menu-list li a{
+    color: #fff;
+  
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #007bff;
+}
+.banner{
+  height: 100px;
+  background: url("banner.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about{
+  padding: 40px 0;
+}
+.about .title{
+  font-size: 35px;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.icon.cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+.navbar.sticky .icon.cancel-btn{
+  top: 10px;
+}
+@media (max-width: 1000px) {
+  body.disabledScroll{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    z-index: 9;
+  }
+  .icon.cancel-btn{
+    display: none;
+  }
+  .icon.cancel-btn.show{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    
+    clip-path: circle(25px at calc(100% - 55px) calc(0% + 50px));
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky .menu-list{
+    clip-path: circle(25px at calc(100% - 55px) calc(0% + 35px));
+  }
+  .navbar .menu-list.active{
+    clip-path: circle(75%);
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+  }
+} 
+/*SCROLLL BARR TERMINEEE */
+
+body{
+  
+    background: rgb(217,212,233);
+    background: linear-gradient(90deg, rgba(217,212,233,1) 0%, rgba(255,172,236,1) 100%);
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+}
+
+header{
+
+
+	box-shadow: 0px 0px 6px black;
+}
+/* 
+#menu {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    margin:5vh;
+    height: 10vh;
+    font-size: 5vh;
+}
+
+#menu a{
+	text-decoration: none;
+	color: #FFFFFF;
+    font-weight: bold;
+  
+}
+
+#menu a:hover{
+	text-shadow: 1px 1px 10px black;
+	color: yellow;
+} */
+
+.titre{
+   margin-top: 10vh;
+   font-family: 'Dancing Script', cursive;
+  text-align: center;
+    color: #FF00EC;
+    font-weight: bold;
+    font-size: 7vh;
+}
+
+.auCentre{
+    margin-top: 5vh;
+text-align: center;
+font-weight: bold;
+    font-size: 4vh;
+    margin-bottom: 5vh;
+}
+.auCentreSouligne{
+    margin-top: 5vh;
+text-align: center;
+font-weight: bold;
+    font-size: 4vh;
+    margin-bottom: 5vh;
+    text-decoration: underline;
+}
+
+#textPresentation{
+    font-family: Great Vibes,cursive;
+    font-size: 20vh;
+    font-weight: bold;
+    text-align: center;
+  color: #FF00EC;
+    margin-top: 30px;
+    
+}
+    #annonce{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+.panneau{
+    width:5%;
+    height:4%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.reseau {
+	width: 10vh;
+}
+
+hr{
+    width:60%;
+    height: 3px;
+    background: rgb(255,132,111);
+    background: linear-gradient(90deg, rgba(255,132,111,1) 0%, rgba(11,9,255,1) 100%);
+    margin-bottom: 7vh;
+    margin-top: 7vh;
+}
+.testo{	
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+    padding-top: 20px;
+    
+	font-size: 25px;
+}
+
+
+#foot{
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-width: 20px;
+   
+}
+
+.sansDeco{
+	text-decoration: none;
+	color: #0046D2;
+}
+.sansDeco2{
+	text-decoration: none;
+	color: green;
+font-size: 60%;
+}
+#map {
+    border-top: 2mm ridge #00ffcf;
+    border-bottom: 2mm ridge #00ffcf;
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    margin-bottom: 5vh;
+}
+
+    #map iframe {
+        
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+.imgCentre{
+   border-radius: 50px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   border: 2mm ridge rgba(190, 50, 220, .6);
+   width: 70%;
+}
+a{
+text-decoration: none;
+}
+
+/* 
+  ul { 
+   
+    padding: 0; 
+    list-style: none; 
+    display: table;
+  
+    text-align: center;
+  }
+  li { 
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+  }
+  .decoMenu {
+    color: #fff;
+    
+    text-decoration: none;
+    
+    
+    display: inline-block;
+ 
+    position: relative;
+  }
+  .decoMenu:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .decoMenu:hover:after { 
+    width: 100%; 
+    left: 0; 
+  } */
+ 
+
+#divHoraire{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+#ouverture{
+
+    font-family: 'Alice', serif;
+    font-size: 5vh;
+    width: 65vh;
+  
+}
+.horaire{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+h5{
+
+    font-family: 'Alice', serif;
+    font-size: 5vh;
+    font-weight: bold;
+    margin-top: 5vh;
+}
+.btn {
+    display: block;
+    font-family: Great Vibes,cursive;
+    font-weight: bold;
+	margin: auto;
+	
+    
+    font-size: 50px;
+    color: #FF00EC;
+    background: rgb(255,178,164);
+background: linear-gradient(90deg, rgba(255,178,164,1) 44%, rgba(211,226,126,1) 100%);
+    border-radius: 30px;
+}
+#pourLeBouton{
+    display: flex;
+flex-direction: row;
+justify-content:center;
+align-items: baseline;
+margin-top: 7vh;
+margin-bottom: 7vh;
+}
+
+
+.btn:active {  
+    top: 6px;
+}
+
+
+footer{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+border-top: solid black 3px;
+}
+
+.cadre{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:5vh;
+    margin-bottom:7vh;
+    width: 70%;
+    font-family: 'Alice', serif;
+   font-size: 5vh;
+   text-align: justify;
+   text-align: center;
+   
+   display: flex;
+}
+.cadreAttention{
+    
+    
+    width: 50vh;
+    font-family: 'Alice', serif;
+   font-size: 5vh;
+   text-align: justify;
+   text-align: center;
+
+}
+
+.cadreHoraire{
+    
+    margin-top:5vh;
+    margin-bottom:7vh;
+ 
+    font-family: 'Alice', serif;
+   font-size: 5vh;
+   text-align: justify;
+   text-align: center;
+ 
+}
+
+.cadre2{
+    margin-top:5vh;
+    margin-bottom:7vh;
+    width: 80vh;
+    font-family: 'Alice', serif;
+   font-size: 5vh;
+}
+
+#cadreContact{
+    display: flex;
+   justify-content: center;
+   flex-direction: column;
+   margin-left: auto;
+   margin-right: auto;
+    margin-top:5vh;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom:7vh;
+  
+    font-family: 'Alice', serif;
+   font-size: 5vh;
+   text-align: justify;
+   text-align: center;
+ 
+}
+
+.cadreFin{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:5vh;
+    width: 70%;
+    font-family: 'Alice', serif;
+   font-size: 5vh;
+   text-align: center;
+  
+}
+
+
+#presentationMlleStyle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+/*MODE MOBILE */
+@media screen and (max-width: 1000px){
+
+ .btn{
+
+    font-size: 30px;
+    max-height:44px;
+ }
+       
+#pourLeBouton{
+
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#textPresentation{
+    font-size: 60px;
+}
+
+
+#cadreContact{
+    
+    font-size: 20px;
+}
+.cadreFin{
+
+    font-size: 20px;
+}
+h5{
+    font-size: 20px;
+
+}
+.sansDeco{
+
+    font-size: 15px;
+}
+p{
+    font-size: 20px;
+}
+.reseau{
+    height:7vh;
+    width:7vh;
+}
+.panneau{
+    width:10vh;
+    height:5vh;
+}
+   
+.titre{
+    font-size: 40px;
+}
+
+#ouverture{
+    display: none;
+}
+/* 
+nav:before{
+	content: "Menu";
+    border-bottom: solid 2px black ;
+   margin-right: 10px;
+}
+
+
+nav{
+
+    margin-top: 100px;
+    margin-bottom: 50px;
+	margin-right: 2%;
+   
+	width: 100%;
+	cursor: pointer;
+	font-size: 30px;
+	float: right;
+    padding-right: 5px;
+	text-align: right;
+	
+	transition: 0.25s
+} */
+
+
+.cadre{
+   
+ max-width: 400px;
+		display: flex;	
+}
+
+#cadreContact{
+   
+    max-width: 400px;
+           display: flex;	
+   }
+
+   .cadreFin{
+   
+    max-width: 400px;
+           display: flex;
+           
+   }
+
+hr{
+    width:100%;
+}
+nav>#menu, nav>#menu>li{
+	width: 5%;
+	display: none;
+   
+}
+
+nav:hover>#menu{
+	display: block;
+    
+    border-top: solid 1px black;
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+    
+}
+
+nav>#menu>li{
+	display: block;
+	
+	height: 5px;
+    border-bottom: solid 1px black;
+	width : 100%;
+  
+	text-align : center;
+	font-weight: bold;
+	font-family: 'Rock Salt', cursive;
+	font-size: 10px;
+}
+
+nav>#menu {
+	width: 40%;
+    
+    height: auto;
+	margin-left : 60%;
+	text-align: center;
+	box-shadow: 0px 0px 1px black;
+	background-color:#E12AFA;
+
+}
+
+#menu a{
+	text-decoration: none;
+	color: black;
+}
+
+
+}
+
+@media screen and (max-width: 305px){
+    
+    #textPresentation{
+        font-size: 50px;
+        margin-top: 100px;
+    } 
+
+
+    .titre{
+        font-size: 25px;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 550px)and (max-width: 1300px){
+    
+   
+    nav{
+
+       
+        width: 400px;
+        
+    }
+    
+
+
+    
+}
+@media screen and (max-width: 184px){
+.btn{
+
+    font-size: 20px;
+    
+ }
+}

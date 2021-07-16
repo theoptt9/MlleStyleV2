@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mlle Style</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleNouveau.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="#">Mlle Style</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="enfant.html"><i class="fas fa-child"></i> Le coin des enfants !</a></li>
+        <li><a href="index.html"><i class="fas fa-arrow-circle-left"></i>      Retour au menu</a></li>
+     
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+ 
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+<body>
+  <div id="corps">
+  <!-- <div id="retourMenu">
+  <a href="index.html"><p id="menuNouv">Menu</p></a>
+</div> -->
+<div id="presentationNouveau">
+  <div class ="titreNouveau">
+    <h1>Tenue Mlle Style</h1>
+    </div>
+    <div class="cadreNouveau">
+    <p>Voici les tenues que vous pouvez retrouver dans votre boutique Mlle Style.</p>
+    </div>
+  
+
+</div>
+
+
+  <div class="card">
+    <figure>
+      <img src="media/nouveau/image1.jpg" alt="t-shirt">
+    </figure>
+    
+  </div>
+
+  <div class="card">
+    <figure>
+      <img src="media/nouveau/image2.jpg" alt="t-shirt">
+    </figure>
+  </div>
+
+  <div class="card">
+    <figure>
+      <img src="media/nouveau/image3.jpg" alt="t-shirt">
+    </figure>
+  </div>
+
+
+  <div class="card">
+    <figure>
+      <img src="media/nouveau/image4.jpg" alt="t-shirt">
+    </figure>
+    
+  </div>
+
+
+  <div class="card">
+    <figure>
+      <img src="media/nouveau/image5.jpg" alt="t-shirt">
+    </figure>
+   
+  </div>
+
+</body>
+
+
+
+</html>
+
